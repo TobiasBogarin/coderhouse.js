@@ -1,4 +1,5 @@
 //me gustaria añadirle alguna forma de editar los datos ingresados de los clientes
+
 function IniciarSesion() {
     let usuarios = {
         "TOBIAS": "1234",
