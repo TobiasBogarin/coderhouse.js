@@ -1,4 +1,4 @@
-//me gustaria añadirle alguna forma de editar los datos ingresados de los clientes
+//me gustaria añadirle alguna forma de editar los datos ingresados de los clientes falta agregarle funcionalidades de filter
 
 function IniciarSesion() {
     let usuarios = {
@@ -77,3 +77,4 @@ function DatosDeCliente() {
 }
 
 IniciarSesion();
+console.log(usuarios)
