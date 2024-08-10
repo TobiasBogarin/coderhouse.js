@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* O la fuente de tu preferencia */
+}
+
+.navbar {
+    background-color: #2d2574; /* Color de fondo oscuro para la barra de navegación */
+    color: rgb(35, 0, 0);
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que la barra de navegación se mantenga sobre otros elementos */
+}
+
+.navbar ul {
+    list-style-type: none; /* Elimina los marcadores de lista */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left; /* Alinea los elementos de la lista horizontalmente */
+}
+
+.navbar li a {
+    display: block;
+    color: white; /* Color del texto */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.navbar li a:hover {
+    background-color: #3d3d3d87; /* Color de fondo para el enlace al pasar el mouse */
+    color: rgb(255, 0, 0); /* Color del texto al pasar el mouse */
+}
+.background {
+    position: fixed; /* Cambiado de absolute a fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh; /* Asegura que al menos sea tan alto como la ventana del navegador */
+    object-fit: cover;
+    z-index: -1;
+}
+.search-container {
+    position: absolute;
+    top: 80px; /* Ajusta para ubicarlo cerca de la navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    margin-left: 5px;
+    background-color: #ef983b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #d47f1a;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(239, 152, 59, 0.9);
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #ffffff;
+}
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 120px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding-bottom: 10px; /* Agrega espacio en el fondo de la tarjeta */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Mantiene la imagen dentro de los límites sin cortarla */
+    margin: auto; /* Centra la imagen */
+    display: block;
+    background: #FFF;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px; /* Espacio en la parte superior del título */
+}
+
+.card-info {
+    padding: 15px;
+    color: #555;
+}
+
+/* Estilos para los botones de incremento y decremento */
+.card button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #45a049; /* Un verde más oscuro para el hover */
+}
+
+/* Estilo para el texto de cantidad */
+.card span {
+    display: block;
+    margin: 5px 0;
+    font-size: 16px; /* Tamaño del texto para la cantidad */
+}
+.cart-preview {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+.cart-preview h3 {
+    margin-top: 0;
+}
+
+.cart-preview ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-preview li {
+    margin-bottom: 10px;
+}

@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEDIDOS</title>
+    <link rel="stylesheet" type="text/css" href="../style/Pedidos.css">
 </head>
 <body>
-    <h1>hola mundos</h1>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#preview" id="previewButton">Preview</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img class="background" src="../image/background.jpg" alt="">
+        <div class="search-container">
+            <input type="text" placeholder="Buscar..." class="search-input">
+            <button class="search-button">Buscar</button>
+        </div>
+        <div id="products-container"></div>
+        <!-- Contenedor para el preview del carrito -->
+        <div id="cart-preview" class="cart-preview" style="display: none;">
+            <h3>Carrito de Compras</h3>
+            <ul id="cart-items"></ul>
+        </div>
+    </main>
+    <footer>
+        <button id="logoutButton" class="logout-button">Cerrar Sesión</button>
+    </footer>
+<script src="../script/Remito.js"></script>
 </body>
 </html>

@@ -5,14 +5,22 @@ class VALIDARLOGIN {
             Uriel: '1234',
             Franco: '1234'
         };
+        this.intentosRestantes = 3; // Añadir un contador de intentos
     }
 
     validar(usuario, contrasena) {
+        if (this.intentosRestantes === 0) {
+            console.log('Demasiados intentos fallidos, recarga la pagina para volver a intentar.');
+            return false;
+        }
+
         if (this.usuarios[usuario] && this.usuarios[usuario] === contrasena) {
             console.log('Inicio de sesión exitoso');
+            this.intentosRestantes = 3; // Restablecer los intentos al iniciar sesión correctamente
             return true;
         } else {
-            console.log('Usuario o contraseña incorrecta');
+            this.intentosRestantes--; // Decrementar los intentos restantes
+            console.log(`Usuario o contraseña incorrecta. Intentos restantes: ${this.intentosRestantes}`);
             return false;
         }
     }
@@ -23,31 +31,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('loginButton');
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
-    const mainContent = document.querySelector('main'); // Asumiendo que la animación ocurre en el <main>
+    const mainContent = document.querySelector('main');
+    const messageElement = document.getElementById('message'); // Asegúrate de que este elemento exista en el HTML
 
     function attemptLogin() {
         const username = usernameInput.value;
         const password = passwordInput.value;
         const isValid = loginValidator.validar(username, password);
-        if (isValid) {
-            document.getElementById('message').textContent = 'Inicio de sesión exitoso';
-            document.getElementById('message').style.color = 'green';
-            // Añadir clase de animación
-            mainContent.classList.add('fade-out');
 
-            // Esperar a que termine la animación antes de redirigir
+        if (isValid) {
+            messageElement.textContent = 'Inicio de sesión exitoso';
+            messageElement.style.color = 'green';
+            mainContent.classList.add('fade-out');
             setTimeout(() => {
-                window.location.href = './pages/REMITO.html'; // Ajusta la ruta según sea necesario
-            }, 1000); // Esperar 1000 ms = 1 segundo
+                window.location.href = './pages/REMITO.html';
+            }, 1000);
         } else {
-            document.getElementById('message').textContent = 'Usuario o contraseña incorrecta';
-            document.getElementById('message').style.color = 'red';
+            messageElement.textContent = loginValidator.intentosRestantes > 0 ?
+                'Usuario o contraseña incorrecta' : 'Demasiados intentos fallidos, recarga la pagina.';
+            messageElement.style.color = 'red';
         }
     }
 
     loginButton.addEventListener('click', attemptLogin);
-
-    // También puede manejar el Enter para el inicio de sesión
     [usernameInput, passwordInput].forEach(input => {
         input.addEventListener('keyup', function(event) {
             if (event.key === 'Enter') {
