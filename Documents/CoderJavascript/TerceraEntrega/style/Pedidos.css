@@ -1,55 +1,57 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif; /* O la fuente de tu preferencia */
+    font-family: Arial, sans-serif;
 }
 
 .navbar {
-    background-color: #2d2574; /* Color de fondo oscuro para la barra de navegación */
+    background-color: #2d2574;
     color: rgb(35, 0, 0);
     padding: 10px 20px;
     width: 100%;
-    position: fixed; /* Fija la barra de navegación en la parte superior */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Asegura que la barra de navegación se mantenga sobre otros elementos */
+    z-index: 1000;
 }
 
 .navbar ul {
-    list-style-type: none; /* Elimina los marcadores de lista */
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
 .navbar li {
-    float: left; /* Alinea los elementos de la lista horizontalmente */
+    float: left;
 }
 
 .navbar li a {
     display: block;
-    color: white; /* Color del texto */
+    color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    text-decoration: none;
 }
 
 .navbar li a:hover {
-    background-color: #3d3d3d87; /* Color de fondo para el enlace al pasar el mouse */
-    color: rgb(255, 0, 0); /* Color del texto al pasar el mouse */
+    background-color: #3d3d3d87;
+    color: rgb(255, 0, 0);
 }
+
 .background {
-    position: fixed; /* Cambiado de absolute a fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    min-height: 100vh; /* Asegura que al menos sea tan alto como la ventana del navegador */
+    min-height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
+
 .search-container {
     position: absolute;
-    top: 80px; /* Ajusta para ubicarlo cerca de la navbar */
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -78,6 +80,7 @@ body {
 .search-button:hover {
     background-color: #d47f1a;
 }
+
 footer {
     position: fixed;
     bottom: 0;
@@ -101,6 +104,7 @@ footer {
 .logout-button:hover {
     background-color: #ffffff;
 }
+
 #products-container {
     display: flex;
     flex-wrap: wrap;
@@ -114,14 +118,14 @@ footer {
     width: 250px;
     text-align: center;
     background-color: #f9f9f9;
-    padding-bottom: 10px; /* Agrega espacio en el fondo de la tarjeta */
+    padding-bottom: 10px;
 }
 
 .card img {
     width: 100%;
     height: 200px;
-    object-fit: contain; /* Mantiene la imagen dentro de los límites sin cortarla */
-    margin: auto; /* Centra la imagen */
+    object-fit: contain;
+    margin: auto;
     display: block;
     background: #FFF;
 }
@@ -129,7 +133,7 @@ footer {
 .card-title {
     font-size: 20px;
     font-weight: bold;
-    margin-top: 10px; /* Espacio en la parte superior del título */
+    margin-top: 10px;
 }
 
 .card-info {
@@ -137,11 +141,10 @@ footer {
     color: #555;
 }
 
-/* Estilos para los botones de incremento y decremento */
 .card button {
     padding: 5px 10px;
     margin: 5px;
-    background-color: #4CAF50; /* Color verde */
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
@@ -149,15 +152,15 @@ footer {
 }
 
 .card button:hover {
-    background-color: #45a049; /* Un verde más oscuro para el hover */
+    background-color: #45a049;
 }
 
-/* Estilo para el texto de cantidad */
 .card span {
     display: block;
     margin: 5px 0;
-    font-size: 16px; /* Tamaño del texto para la cantidad */
+    font-size: 16px;
 }
+
 .cart-preview {
     position: absolute;
     top: 100px;

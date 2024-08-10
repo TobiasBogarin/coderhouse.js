@@ -1,5 +1,3 @@
-
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f09d5a;
@@ -10,25 +8,28 @@ body {
     height: 100vh;
     margin: 0;
 }
+
 .login-message {
     margin-top: 10px;
-    color: red; /* Cambia el color según el tipo de mensaje, por ejemplo, verde para éxito y rojo para error */
+    color: red;
     font-size: 14px;
 }
+
 button {
-    background-color: #ff4500; /* Color de fondo naranja */
-    color: white; /* Texto blanco */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Padding para hacer el botón más grande */
-    font-size: 16px; /* Tamaño del texto */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #e63900; /* Color más oscuro al pasar el mouse */
+    background-color: #e63900;
 }
+
 header {
     margin-bottom: 20px;
     padding: 130px 0;
@@ -36,13 +37,13 @@ header {
 }
 
 .logo {
-    width: 35%; /* O cualquier otro porcentaje que se adapte a tu diseño */
-    height: auto; /* Mantiene la proporción del logo */
+    width: 35%;
+    height: auto;
 }
 
 @media (max-width: 600px) {
     .logo {
-        width: 50%; /* Aumenta o disminuye según lo necesario */
+        width: 50%;
     }
 }
 
@@ -99,6 +100,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
 .fade-out {
     animation: fadeOut 1s;
     opacity: 0;

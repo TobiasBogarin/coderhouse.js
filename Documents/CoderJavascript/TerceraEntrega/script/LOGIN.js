@@ -5,7 +5,7 @@ class VALIDARLOGIN {
             Uriel: '1234',
             Franco: '1234'
         };
-        this.intentosRestantes = 3; // Añadir un contador de intentos
+        this.intentosRestantes = 3;
     }
 
     validar(usuario, contrasena) {
@@ -16,10 +16,10 @@ class VALIDARLOGIN {
 
         if (this.usuarios[usuario] && this.usuarios[usuario] === contrasena) {
             console.log('Inicio de sesión exitoso');
-            this.intentosRestantes = 3; // Restablecer los intentos al iniciar sesión correctamente
+            this.intentosRestantes = 3;
             return true;
         } else {
-            this.intentosRestantes--; // Decrementar los intentos restantes
+            this.intentosRestantes--;
             console.log(`Usuario o contraseña incorrecta. Intentos restantes: ${this.intentosRestantes}`);
             return false;
         }
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
     const mainContent = document.querySelector('main');
-    const messageElement = document.getElementById('message'); // Asegúrate de que este elemento exista en el HTML
+    const messageElement = document.getElementById('message');
 
     function attemptLogin() {
         const username = usernameInput.value;
