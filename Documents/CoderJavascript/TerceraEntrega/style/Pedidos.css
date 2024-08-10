@@ -186,3 +186,17 @@ footer {
 .cart-preview li {
     margin-bottom: 10px;
 }
+.clear-cart-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-cart-button:hover {
+    background-color: #e60000;
+}
